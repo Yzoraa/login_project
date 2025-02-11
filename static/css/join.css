@@ -1,0 +1,91 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 회원가입 폼 컨테이너 */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 입력 필드 스타일 */
+input[type="email"],
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 95%;
+}
+
+/* 입력 필드 포커스 시 효과 */
+input:focus {
+    border-color: #007bff;
+}
+
+/* 성별 라디오 버튼 스타일 */
+.content.gender {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.gender-item {
+    display: flex;
+    align-items: center;
+}
+
+/* 핸드폰 번호 입력 태그 한 줄에 배치 */
+.content.phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="tel"] {
+    width: calc(33% - 5px);
+}
+
+/* 버튼 스타일 */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 반응형 디자인 (작은 화면에서 스타일 조정) */
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+    }
+    input[type="tel"] {
+        width: 100%;
+    }
+}
