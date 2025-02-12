@@ -1,6 +1,6 @@
 <h2>:question: 프로젝트 소개</h2>
 <p>ejs와 JavaScript, CSS를 사용해 만든 '로그인/회원가입 기능' 입니다.</p>
-<p>localstorge </p>
+<p>localstorge로 프론트간 데이터 공유 기능을 구현했습니다.</p>
 
 <h2>:star: 실행화면</h2>
 <p>[로그인 화면]</p>
