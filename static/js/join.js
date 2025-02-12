@@ -7,6 +7,18 @@ fetch("/userinfo")
         const resultPwd = document.getElementById("result-pwd");
         const resultPwdCheck = document.getElementById("result-pwdcheck");
 
+        // 이메일 중복 확인 함수
+        checkEMAIL.addEventListener("click", () => {
+            const emailInput = document.querySelector('input[name="email"]').value;
+            const isDuplicate = data_map.some(user => user.email === emailInput);
+            
+            if (isDuplicate) {
+                alert("이미 사용 중인 이메일입니다.");
+            } else {
+                alert("사용 가능한 이메일입니다.");
+            }
+        });
+
         // 비밀번호 입력 함수
         function validatePassword() {
             const pwdInput = document.querySelector('input[name="pwd"]').value; // 여기서 매번 새로 가져오기
@@ -53,6 +65,12 @@ fetch("/userinfo")
             const telInputs = document.querySelectorAll('input[name="tel"]');
             const birthInput = document.querySelector('input[name="birth"]').value;
             const telNumber = Array.from(telInputs).map(input => input.value).join("-");
+
+            const isDuplicate = data_map.some(user => user.email === emailInput);
+            if (isDuplicate) {
+                alert("중복된 이메일 입니다.");
+                return;
+            }
 
             const newUser = {
                 email: emailInput,
